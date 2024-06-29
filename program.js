@@ -30,8 +30,14 @@ const button = document.querySelector("button")
 
 function popup() {
     let boxAmount = +prompt("Set the number of squares per side for the new grid.")
-    return boxAmount;
+    if (boxAmount > 50) {
+        alert("Too many boxes!")
+        return undefined;
+    }
+    else if (boxAmount === 0) return undefined;
+    else return boxAmount;
 }
+
 
 button.addEventListener("click", () => {
     destroyGrid()
