@@ -10,6 +10,10 @@ for (let i = 0; i < boxAmount*boxAmount; i++) {
     box.style.width = `${boxSize}px`
     box.style.height = `${boxSize}px`
 
+    if (boxAmount > 35) {
+        box.style.borderRadius = "1px"
+    }
+
     box.addEventListener("mouseover", () => {
         box.classList.add("painted")
     })
