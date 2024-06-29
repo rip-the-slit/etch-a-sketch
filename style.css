@@ -24,3 +24,12 @@ body {
 .painted.box {
     background-color: gold;
 }
+
+button {
+    border: 0;
+    background-color: gold;
+    color: white;
+    border-radius: 5px;
+    padding: 1px 10px;
+    font-size: 15px;
+}
