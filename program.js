@@ -18,4 +18,22 @@ for (let i = 0; i < boxAmount*boxAmount; i++) {
 
 }
 
+function destroyGrid() {
+    while (container.firstChild) {
+        container.removeChild(container.lastChild)
+    }
+}
+
 createGrid()
+
+const button = document.querySelector("button")
+
+function popup() {
+    let boxAmount = +prompt("Set the number of squares per side for the new grid.")
+    return boxAmount;
+}
+
+button.addEventListener("click", () => {
+    destroyGrid()
+    createGrid(popup())
+})
